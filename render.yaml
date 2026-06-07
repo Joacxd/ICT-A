@@ -1,10 +1,12 @@
-iit_antartico/
-  Procfile
-  render.yaml
-  requirements.txt
-  config.py
-  actualizar.bat
-  scripts/
-  api/
-  dashboard/
-  data/
+services:
+  - type: web
+    name: icta-monitor
+    env: python
+    pythonVersion: "3.11.12"
+    buildCommand: pip install -r requirements.txt && python scripts/init_db.py
+    startCommand: gunicorn api.app:app --bind 0.0.0.0:$PORT
+
+databases:
+  - name: icta-db
+    databaseName: icta
+    user: icta_user
