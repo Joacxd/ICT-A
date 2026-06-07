@@ -1,0 +1,10 @@
+iit_antartico/
+  Procfile
+  render.yaml
+  requirements.txt
+  config.py
+  actualizar.bat
+  scripts/
+  api/
+  dashboard/
+  data/

@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "data"
+		},
+		{
+			"path": "iit_antartico"
+		},
+		{
+			"path": "{data,scripts,api,dashboard"
+		},
+		{
+			"path": "api"
+		},
+		{
+			"path": "dashboard"
+		},
+		{
+			"path": "scripts"
+		}
+	]
+}
