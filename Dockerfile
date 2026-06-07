@@ -11,4 +11,4 @@ EXPOSE 8000
 
 ENV PORT=8000
 
-CMD sh -c "python scripts/init_db.py && gunicorn api.app:app --bind 0.0.0.0:8000 --workers 2"
+CMD sh -c "python scripts/init_db.py && python api/app.py"
