@@ -37,7 +37,7 @@ def init_db():
             fuente_clima  TEXT,
             fuente_eco    TEXT,
             ingreso_manual INTEGER DEFAULT 0,
-            created_at    TEXT DEFAULT {'current_timestamp' if tipo == 'pg' else "datetime('now')"},
+            created_at    TEXT DEFAULT {'current_timestamp' if tipo == 'pg' else "(datetime('now'))"},
             UNIQUE(base_id, fecha)
         )
     """)
@@ -55,7 +55,7 @@ def init_db():
             iit_a           REAL NOT NULL,
             estado          TEXT NOT NULL,
             ajuste_estacion INTEGER DEFAULT 0,
-            created_at      TEXT DEFAULT {'current_timestamp' if tipo == 'pg' else "datetime('now')"},
+            created_at    TEXT DEFAULT {'current_timestamp' if tipo == 'pg' else "(datetime('now'))"},
             UNIQUE(base_id, fecha)
         )
     """)
@@ -70,7 +70,7 @@ def init_db():
             estado_prev  TEXT,
             estado_nuevo TEXT,
             mensaje      TEXT,
-            created_at   TEXT DEFAULT {'current_timestamp' if tipo == 'pg' else "datetime('now')"}
+            created_at   TEXT DEFAULT {'current_timestamp' if tipo == 'pg' else "(datetime('now'))"}
         )
     """)
     con.commit()

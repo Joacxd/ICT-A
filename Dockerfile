@@ -7,8 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN python scripts/init_db.py
+
 
 EXPOSE 8000
 
-CMD ["gunicorn", "api.app:app", "--bind", "0.0.0.0:8000", "--workers", "2"]
+CMD ["sh", "-c", "python scripts/init_db.py && gunicorn api.app:app --bind 0.0.0.0:8000 --workers 2"]
