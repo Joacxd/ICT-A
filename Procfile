@@ -1,1 +1,1 @@
-web: gunicorn api.app:app --bind 0.0.0.0:$PORT
+web: rm -rf /app/.venv && pip install -r requirements.txt && python scripts/init_db.py && gunicorn api.app:app --bind 0.0.0.0:$PORT
